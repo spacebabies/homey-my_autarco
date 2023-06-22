@@ -2,13 +2,13 @@
 
 const { Driver } = require('homey');
 
-class MyDriver extends Driver {
+class MyAutarco extends Driver {
 
   /**
    * onInit is called when the driver is initialized.
    */
   async onInit() {
-    this.log('MyDriver has been initialized');
+    this.log('MyAutarco has been initialized');
   }
 
   /**
@@ -18,19 +18,21 @@ class MyDriver extends Driver {
    */
   async onPairListDevices() {
     return [
-      // Example device data, note that `store` is optional
-      // {
-      //   name: 'My Device',
-      //   data: {
-      //     id: 'my-device',
-      //   },
-      //   store: {
-      //     address: '127.0.0.1',
-      //   },
-      // },
+      {
+        name: 'My inverter',
+        data: {
+          id: 'my-inverter',
+        },
+        store: {
+          address: '127.0.0.1',
+        },
+        settings: {
+          site: "kthxbai"
+        }
+      },
     ];
   }
 
 }
 
-module.exports = MyDriver;
+module.exports = MyAutarco;

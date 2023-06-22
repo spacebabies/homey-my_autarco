@@ -9,12 +9,12 @@
     "local"
   ],
   "name": {
-    "en": "My Autarco",
-    "nl": "Mijn Autarco"
+    "en": "Autarco",
+    "nl": "Autarco"
   },
   "description": {
     "en": "Adds support for Autarco inverters.",
-    "nl": "Biedt ondersteuning voor Autarco inverters"
+    "nl": "Biedt ondersteuning voor Autarco omvormers."
   },
   "category": [
     "energy"
@@ -77,11 +77,46 @@
         "lan"
       ],
       "images": {
-        "small": "/drivers/my-autarco-solar-panels/assets/images/autarco-inverter-small.png",
-        "large": "/drivers/my-autarco-solar-panels/assets/images/autarco-inverter-large.png",
-        "xlarge": "/drivers/my-autarco-solar-panels/assets/images/autarco-inverter-xlarge.png"
+        "small": "/drivers/my_autarco/assets/images/autarco-inverter-small.png",
+        "large": "/drivers/my_autarco/assets/images/autarco-inverter-large.png",
+        "xlarge": "/drivers/my_autarco/assets/images/autarco-inverter-xlarge.png"
       },
-      "id": "my-autarco-solar-panels",
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "autarco.png",
+            "title": {
+              "en": "My Autarco login",
+              "nl": "Inlog voor My Autarco"
+            },
+            "usernameLabel": {
+              "en": "Email",
+              "nl": "E-mailadres"
+            },
+            "usernamePlaceholder": {
+              "en": "john@example.com"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "nl": "Wachtwoord"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "my_autarco",
       "settings": [
         {
           "id": "site",

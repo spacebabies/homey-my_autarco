@@ -1,6 +1,7 @@
 'use strict';
 
 const { Device } = require('homey');
+const fetch = require('node-fetch');
 
 class MyDevice extends Device {
 
@@ -8,7 +9,14 @@ class MyDevice extends Device {
    * onInit is called when the device is initialized.
    */
   async onInit() {
-    const settings = this.getSettings();
+    this.settings = this.getSettings();
+
+    await this.getPower();
+
+    this.intervalID = setInterval(async () => {
+      await this.getPower();
+    }, 60 * 1000);
+
     this.log('MyDevice has been initialized');
   }
 
@@ -17,6 +25,19 @@ class MyDevice extends Device {
    */
   async onAdded() {
     this.log('MyDevice has been added');
+  }
+
+  async getPower() {
+    const api_power = `https://my.autarco.com/api/m1/site/${this.settings.site}/power`;
+    const basic = Buffer.from(`${this.settings.username}:${this.settings.password}`)
+      .toString('base64');
+    const headers = {
+      'Authorization': `Basic ${basic}`
+    };
+
+    const response = await fetch(api_power, { headers: headers });
+    const data = await response.json();
+    this.setCapabilityValue('measure_power', data.stats.kpis.pv_now).catch(this.error);
   }
 
   /**
@@ -28,6 +49,7 @@ class MyDevice extends Device {
    * @returns {Promise<string|void>} return a custom message that will be displayed
    */
   async onSettings({ oldSettings, newSettings, changedKeys }) {
+    this.settings = newSettings;
     this.log('MyDevice settings where changed');
   }
 

@@ -8,12 +8,12 @@
     "local"
   ],
   "name": {
-    "en": "My Autarco",
-    "nl": "Mijn Autarco"
+    "en": "Autarco",
+    "nl": "Autarco"
   },
   "description": {
     "en": "Adds support for Autarco inverters.",
-    "nl": "Biedt ondersteuning voor Autarco inverters"
+    "nl": "Biedt ondersteuning voor Autarco omvormers."
   },
   "category": [
     "energy"

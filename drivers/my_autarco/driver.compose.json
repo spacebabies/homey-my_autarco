@@ -1,0 +1,55 @@
+{
+  "name": {
+    "en": "My Autarco solar panels"
+  },
+  "class": "solarpanel",
+  "capabilities": [
+    "measure_power"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/autarco-inverter-small.png",
+    "large": "{{driverAssetsPath}}/images/autarco-inverter-large.png",
+    "xlarge": "{{driverAssetsPath}}/images/autarco-inverter-xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "login_credentials",
+      "template": "login_credentials",
+      "options": {
+        "logo": "autarco.png",
+        "title": {
+          "en": "My Autarco login",
+          "nl": "Inlog voor My Autarco"
+        },
+        "usernameLabel": {
+          "en": "Email",
+          "nl": "E-mailadres"
+        },
+        "usernamePlaceholder": {
+          "en": "john@example.com"
+        },
+        "passwordLabel": {
+          "en": "Password",
+          "nl": "Wachtwoord"
+        }
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}
