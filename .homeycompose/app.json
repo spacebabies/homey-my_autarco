@@ -1,0 +1,35 @@
+{
+  "id": "nl.spacebabies.autarco",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#19262D",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "My Autarco",
+    "nl": "Mijn Autarco"
+  },
+  "description": {
+    "en": "Adds support for Autarco inverters.",
+    "nl": "Biedt ondersteuning voor Autarco inverters"
+  },
+  "category": [
+    "energy"
+  ],
+  "tags": {
+    "en": ["sun", "solar", "panel", "panels", "pv", "energy", "power", "electricity", "volt", "watt", "kwh", "inverter", "inverters"],
+    "nl": ["zon", "zonne", "paneel", "panelen", "pv", "energie", "kracht", "elektriciteit", "volt", "watt", "kWh", "omvormer", "omvormers"]
+  },
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/autarco-small.png",
+    "large": "/assets/images/autarco-large.png",
+    "xlarge": "/assets/images/autarco-xlarge.png"
+  },
+  "author": {
+    "name": "Space Babies",
+    "email": "info@spacebabies.nl"
+  }
+}

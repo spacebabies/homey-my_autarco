@@ -1,0 +1,41 @@
+[
+    {
+        "id": "site",
+        "type": "text",
+        "label": {
+            "en": "Site",
+            "nl": "Locatie"
+        },
+        "value": "",
+        "hint": {
+            "en": "See https://my.autarco.com/site/SITE",
+            "nl": "Zie https://my.autarco.com/site/LOCATIE"
+        }
+    },
+    {
+        "id": "login",
+        "type": "text",
+        "label": {
+            "en": "Login",
+            "nl": "Inlog"
+        },
+        "value": "john@example.com",
+        "hint": {
+            "en": "The login you use for My Autarco.",
+            "nl": "De inlognaam die je gebruikt voor My Autarco."
+        }
+    },
+    {
+        "id": "password",
+        "type": "password",
+        "label": {
+            "en": "Password",
+            "nl": "Wachtwoord"
+        },
+        "value": "",
+        "hint": {
+            "en": "The password you use for My Autarco.",
+            "nl": "Het wachtwoord dat je gebruikt voor My Autarco"
+        }
+    }
+]
